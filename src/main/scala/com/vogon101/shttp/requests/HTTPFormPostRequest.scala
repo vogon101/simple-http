@@ -8,12 +8,14 @@ import org.apache.http.client.methods.{CloseableHttpResponse, HttpPost}
 import org.apache.http.entity.StringEntity
 import org.apache.http.impl.client.{BasicCookieStore, DefaultHttpClient}
 import org.apache.http.impl.cookie.BasicClientCookie
+import org.apache.http.message.BasicNameValuePair
 import org.apache.http.{Consts, NameValuePair}
 
 import scala.collection.JavaConversions
 
 /**
   * Class for the POST of a form to an HTTP Host
+ *
   * @param url The url to send the request to
   * @param rf A factory to create the response objects with
   * @param params The parameters of the form in name->value form
@@ -26,7 +28,7 @@ case class HTTPFormPostRequest[R <: HTTPResponse]
 (
   override val url: String,
   rf: (CloseableHttpResponse) => R = HTTPResponse.HTTPResponseFactory[R] _,
-  params: List[NameValuePair],
+  params: Map[String, String],
   config: HTTPRequestConfig = new HTTPRequestConfig(),
   cookies: Map[String, String] = Map(),
   headers: Map[String, String] = Map()
@@ -34,6 +36,7 @@ case class HTTPFormPostRequest[R <: HTTPResponse]
 
   /**
     * Execute the request
+ *
     * @return The response from the server of the specified type
     */
   def execute() = {
@@ -46,7 +49,14 @@ case class HTTPFormPostRequest[R <: HTTPResponse]
     //Set the headers (Uses the implicit map2HeaderList)
     post.setHeaders(headers)
     //Set the main body to an HTTP form
-    post.setEntity(new UrlEncodedFormEntity(JavaConversions.asJavaCollection(params), Consts.UTF_8))
+    post.setEntity(new UrlEncodedFormEntity(
+      JavaConversions.asJavaCollection(
+        params.map{
+          case (n,v) => new BasicNameValuePair(n,v)
+        }
+      ),
+      Consts.UTF_8)
+    )
     //Create the client
     val client = new DefaultHttpClient()
     //Set the cookies (Uses the implicit map2CookieStore)
