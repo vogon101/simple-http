@@ -1,0 +1,175 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>requests - simple-http documentation - com.vogon101.shttp.requests</title>
+          <meta name="description" content="requests - simple - http documentation - com.vogon101.shttp.requests" />
+          <meta name="keywords" content="requests simple http documentation com.vogon101.shttp.requests" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'com.vogon101.shttp.requests.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.vogon101">vogon101</a>.<a href="../package.html" class="extype" name="com.vogon101.shttp">shttp</a></p>
+        <h1>requests</h1> <span class="permalink">
+      <a href="../../../../index.html#com.vogon101.shttp.requests.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">requests</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.vogon101.shttp.requests.HTTPFormPostRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="HTTPFormPostRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsHTTPRequest[R]withProductwithSerializable"></a>
+      <a id="HTTPFormPostRequest[R&lt;:HTTPResponse]:HTTPFormPostRequest[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HTTPFormPostRequest.html"><span class="name">HTTPFormPostRequest</span></a><span class="tparams">[<span name="R">R &lt;: <a href="../response/HTTPResponse.html" class="extype" name="com.vogon101.shttp.response.HTTPResponse">HTTPResponse</a></span>]</span><span class="params">(<span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rf">rf: (<span class="extype" name="org.apache.http.client.methods.CloseableHttpResponse">CloseableHttpResponse</span>) ⇒ <span class="extype" name="com.vogon101.shttp.requests.HTTPFormPostRequest.R">R</span> = <span class="symbol"><span class="name"><a href="../../../package.html">HTTPResponse.HTTPResponseFactory[R]</a></span></span></span>, <span name="params">params: <span class="extype" name="scala.List">List</span>[<span class="extype" name="org.apache.http.NameValuePair">NameValuePair</span>]</span>, <span name="config">config: <a href="../utils/HTTPRequestConfig.html" class="extype" name="com.vogon101.shttp.utils.HTTPRequestConfig">HTTPRequestConfig</a> = <span class="symbol"><span class="name"><a href="../../../package.html">new HTTPRequestConfig()</a></span></span></span>, <span name="cookies">cookies: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Map()</span></span>, <span name="headers">headers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Map()</span></span>)</span><span class="result"> extends <a href="HTTPRequest.html" class="extype" name="com.vogon101.shttp.requests.HTTPRequest">HTTPRequest</a>[<span class="extype" name="com.vogon101.shttp.requests.HTTPFormPostRequest.R">R</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.vogon101.shttp.requests.package@HTTPFormPostRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsHTTPRequest[R]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Class for the POST of a form to an HTTP Host</p><div class="fullcomment"><div class="comment cmt"><p>Class for the POST of a form to an HTTP Host</p></div><dl class="paramcmts block"><dt class="tparam">R</dt><dd class="cmt"><p>The type of response object
+</p></dd><dt class="param">url</dt><dd class="cmt"><p>The url to send the request to</p></dd><dt class="param">rf</dt><dd class="cmt"><p>A factory to create the response objects with</p></dd><dt class="param">params</dt><dd class="cmt"><p>The parameters of the form in name-&gt;value form</p></dd><dt class="param">config</dt><dd class="cmt"><p>The config object for the request</p></dd><dt class="param">cookies</dt><dd class="cmt"><p>Map of cookies to send with the request</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Map of headers to send with the request</p></dd></dl></div>
+    </li><li name="com.vogon101.shttp.requests.HTTPGetRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="HTTPGetRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsHTTPRequest[R]withProductwithSerializable"></a>
+      <a id="HTTPGetRequest[R&lt;:HTTPResponse]:HTTPGetRequest[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HTTPGetRequest.html"><span class="name">HTTPGetRequest</span></a><span class="tparams">[<span name="R">R &lt;: <a href="../response/HTTPResponse.html" class="extype" name="com.vogon101.shttp.response.HTTPResponse">HTTPResponse</a></span>]</span><span class="params">(<span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rf">rf: (<span class="extype" name="org.apache.http.client.methods.CloseableHttpResponse">CloseableHttpResponse</span>) ⇒ <span class="extype" name="com.vogon101.shttp.requests.HTTPGetRequest.R">R</span> = <span class="symbol"><span class="name"><a href="../../../package.html">HTTPResponse.HTTPResponseFactory[R]</a></span></span></span>, <span name="config">config: <a href="../utils/HTTPRequestConfig.html" class="extype" name="com.vogon101.shttp.utils.HTTPRequestConfig">HTTPRequestConfig</a> = <span class="symbol"><span class="name"><a href="../../../package.html">new HTTPRequestConfig()</a></span></span></span>, <span name="cookies">cookies: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Map()</span></span>, <span name="headers">headers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Map()</span></span>)</span><span class="result"> extends <a href="HTTPRequest.html" class="extype" name="com.vogon101.shttp.requests.HTTPRequest">HTTPRequest</a>[<span class="extype" name="com.vogon101.shttp.requests.HTTPGetRequest.R">R</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.vogon101.shttp.requests.package@HTTPGetRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsHTTPRequest[R]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Class for a GET request to an HTTP Host
+</p><div class="fullcomment"><div class="comment cmt"><p>Class for a GET request to an HTTP Host
+</p></div><dl class="paramcmts block"><dt class="tparam">R</dt><dd class="cmt"><p>The type of response object
+</p></dd><dt class="param">url</dt><dd class="cmt"><p>The url to send the request to</p></dd><dt class="param">rf</dt><dd class="cmt"><p>A factory to create the response objects with</p></dd><dt class="param">config</dt><dd class="cmt"><p>The config object for the request</p></dd><dt class="param">cookies</dt><dd class="cmt"><p>Map of cookies to send with the request</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Map of headers to send with the request</p></dd></dl></div>
+    </li><li name="com.vogon101.shttp.requests.HTTPPostRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="HTTPPostRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsHTTPRequest[R]withProductwithSerializable"></a>
+      <a id="HTTPPostRequest[R&lt;:HTTPResponse]:HTTPPostRequest[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HTTPPostRequest.html"><span class="name">HTTPPostRequest</span></a><span class="tparams">[<span name="R">R &lt;: <a href="../response/HTTPResponse.html" class="extype" name="com.vogon101.shttp.response.HTTPResponse">HTTPResponse</a></span>]</span><span class="params">(<span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rf">rf: (<span class="extype" name="org.apache.http.client.methods.CloseableHttpResponse">CloseableHttpResponse</span>) ⇒ <span class="extype" name="com.vogon101.shttp.requests.HTTPPostRequest.R">R</span> = <span class="symbol"><span class="name"><a href="../../../package.html">HTTPResponse.HTTPResponseFactory[R]</a></span></span></span>, <span name="config">config: <a href="../utils/HTTPRequestConfig.html" class="extype" name="com.vogon101.shttp.utils.HTTPRequestConfig">HTTPRequestConfig</a> = <span class="symbol"><span class="name"><a href="../../../package.html">new HTTPRequestConfig()</a></span></span></span>, <span name="body">body: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="bodyMIMEType">bodyMIMEType: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;application/text&quot;</span></span>, <span name="cookies">cookies: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Map()</span></span>, <span name="headers">headers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Map()</span></span>)</span><span class="result"> extends <a href="HTTPRequest.html" class="extype" name="com.vogon101.shttp.requests.HTTPRequest">HTTPRequest</a>[<span class="extype" name="com.vogon101.shttp.requests.HTTPPostRequest.R">R</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.vogon101.shttp.requests.package@HTTPPostRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsHTTPRequest[R]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Class for a POST request to an HTTP host</p><div class="fullcomment"><div class="comment cmt"><p>Class for a POST request to an HTTP host</p></div><dl class="paramcmts block"><dt class="tparam">R</dt><dd class="cmt"><p>The type of response object
+</p></dd><dt class="param">url</dt><dd class="cmt"><p>The url to send the request to</p></dd><dt class="param">rf</dt><dd class="cmt"><p>A factory to create the response objects with</p></dd><dt class="param">config</dt><dd class="cmt"><p>The config object for the request</p></dd><dt class="param">body</dt><dd class="cmt"><p>The body of the request as a string</p></dd><dt class="param">bodyMIMEType</dt><dd class="cmt"><p>The MIMEType of the body</p></dd><dt class="param">cookies</dt><dd class="cmt"><p>Map of cookies to send with the request</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Map of headers to send with the request</p></dd></dl></div>
+    </li><li name="com.vogon101.shttp.requests.HTTPRequest" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="HTTPRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsAnyRef"></a>
+      <a id="HTTPRequest[R&lt;:HTTPResponse]:HTTPRequest[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HTTPRequest.html"><span class="name">HTTPRequest</span></a><span class="tparams">[<span name="R">R &lt;: <a href="../response/HTTPResponse.html" class="extype" name="com.vogon101.shttp.response.HTTPResponse">HTTPResponse</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.vogon101.shttp.requests.package@HTTPRequest[R&lt;:com.vogon101.shttp.response.HTTPResponse]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Base class for an HTTP request to a server</p><div class="fullcomment"><div class="comment cmt"><p>Base class for an HTTP request to a server</p></div><dl class="paramcmts block"><dt class="tparam">R</dt><dd class="cmt"><p>The type of response object
+</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
