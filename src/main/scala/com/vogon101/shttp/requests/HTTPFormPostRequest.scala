@@ -27,9 +27,9 @@ case class HTTPFormPostRequest[R <: HTTPResponse]
   rf: (CloseableHttpResponse) => R = HTTPResponse.HTTPResponseFactory[R] _,
   params: Map[String, String],
   config: HTTPRequestConfig = new HTTPRequestConfig( ),
-  cookies: Map[String, String] = Map( ),
+  cs: Map[String, String] = Map( ),
   headers: Map[String, String] = Map( )
-) extends HTTPRequest( url, rf ) {
+) extends HTTPRequest( url, rf, cs ) {
 
   /**
     * Execute the request

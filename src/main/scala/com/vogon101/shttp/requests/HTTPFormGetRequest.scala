@@ -11,7 +11,7 @@ class HTTPFormGetRequest[R <: HTTPResponse](
   url: String,
   override val rf: (CloseableHttpResponse) => R = HTTPResponse.HTTPResponseFactory[R] _,
   override val config: HTTPRequestConfig = new HTTPRequestConfig( ),
-  override val cookies: Map[String, String] = Map( ),
+  cs: Map[String, String] = Map( ),
   override val headers: Map[String, String] = Map( ),
   params: Map[String, String] = Map( )
 ) extends HTTPGetRequest(
@@ -20,7 +20,7 @@ class HTTPFormGetRequest[R <: HTTPResponse](
   }.mkString( "" ),
   rf,
   config,
-  cookies,
+  cs,
   headers
 ) {}
 

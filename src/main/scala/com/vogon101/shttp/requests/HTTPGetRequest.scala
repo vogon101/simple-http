@@ -11,7 +11,7 @@ import org.apache.http.impl.client.DefaultHttpClient
   * @param url     The url to send the request to
   * @param rf      A factory to create the response objects with
   * @param config  The config object for the request
-  * @param cookies Map of cookies to send with the request
+  * @param cs Map of cookies to send with the request
   * @param headers Map of headers to send with the request
   * @tparam R The type of response object
   */
@@ -20,9 +20,9 @@ case class HTTPGetRequest[R <: HTTPResponse]
   override val url: String,
   rf: (CloseableHttpResponse) => R = HTTPResponse.HTTPResponseFactory[R] _,
   config: HTTPRequestConfig = new HTTPRequestConfig( ),
-  cookies: Map[String, String] = Map( ),
+  cs: Map[String, String] = Map( ),
   headers: Map[String, String] = Map( )
-) extends HTTPRequest( url, rf ) {
+) extends HTTPRequest( url, rf, cs ) {
 
   //TODO: GetResource
   //TODO: Stateful context

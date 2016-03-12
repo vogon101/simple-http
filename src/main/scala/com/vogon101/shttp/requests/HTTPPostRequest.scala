@@ -14,7 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient
   * @param config       The config object for the request
   * @param body         The body of the request as a string
   * @param bodyMIMEType The MIMEType of the body
-  * @param cookies      Map of cookies to send with the request
+  * @param cs      Map of cookies to send with the request
   * @param headers      Map of headers to send with the request
   * @tparam R The type of response object
   */
@@ -25,9 +25,9 @@ case class HTTPPostRequest[R <: HTTPResponse]
   config: HTTPRequestConfig = new HTTPRequestConfig( ),
   body: String = "",
   bodyMIMEType: String = "application/text",
-  cookies: Map[String, String] = Map( ),
+  cs: Map[String, String] = Map( ),
   headers: Map[String, String] = Map( )
-) extends HTTPRequest( url, rf ) {
+) extends HTTPRequest( url, rf, cs ) {
 
   /**
     * Execute the request

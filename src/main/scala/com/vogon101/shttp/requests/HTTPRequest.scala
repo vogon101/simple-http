@@ -17,7 +17,7 @@ import org.apache.http.message.BasicHeader
   * @param responseFactory A factory to create the response objects with
   * @tparam R The type of response object
   */
-abstract class HTTPRequest[R <: HTTPResponse]( val url: String, val responseFactory: (CloseableHttpResponse) => R ) {
+abstract class HTTPRequest[R <: HTTPResponse]( val url: String, val responseFactory: (CloseableHttpResponse) => R, private var  _cookies: Map[String, String]) {
 
   /**
     * Execute the request
@@ -65,5 +65,9 @@ abstract class HTTPRequest[R <: HTTPResponse]( val url: String, val responseFact
       case (name, value) => new BasicHeader( name, value )
     }.toList.toArray
   }
+
+  def cookies = _cookies
+
+  def addCookies(cs: Map[String, String]) = _cookies ++= cs
 
 }
